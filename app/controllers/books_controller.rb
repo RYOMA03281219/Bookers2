@@ -28,6 +28,7 @@ class BooksController < ApplicationController
     redirect_to book_path(book.id)
   end
 
+
   def destroy
     book = Book.find(params[:id])
     book.destroy
