@@ -1,0 +1,21 @@
+<div class="row">
+  <dev class="col-lg-4">
+    <%= render 'users/userinfo', user: @user %> <!--User infoの部分テンプレート-->
+    <%= render 'books/newbook', book: @book %> <!--New bookの部分テンプレート-->
+  </div>
+
+
+<!--投稿一覧-->
+<div class="col-lg-8">
+  <h2>Books</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Opinion</th>
+      </tr>
+    </thead>
+
+    </table>
+  </div>
+  </div>  <!-- この行を追加 -->
