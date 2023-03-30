@@ -1,8 +1,7 @@
 class Book < ApplicationRecord
 
-  has_one_attached :image
   belongs_to :user
-  
-  varidates :Title,presence: true
-  varidates :Opinion,presence: true
+
+  validates :title,presence: true
+  validates :opinion,presence: true
 end

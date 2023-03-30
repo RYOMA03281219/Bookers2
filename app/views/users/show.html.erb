@@ -1,7 +1,6 @@
 <!--ユーザーの詳細-->
 <div>
   <h3><%= @user.name %></h3>
-  <%= image_tag @user.get_profile_image(100,100) %>
   <% if @user == authenticate_user! %>
   <p><%= link_to "Update User", edit_user_path(@user) %></p>
   <% end %>
@@ -9,3 +8,16 @@
 
 <!--ユーザーの投稿一覧-->
 <%= render 'books/list', books: @books %>
+
+ <div class="col-xs-9">
+
+        <h2>Books</h2>
+        <table class="table table-hover table-inverse">
+          <thead>
+            <tr>
+              <th><!--ProfileImage--></th>
+              <th>Title</th>
+              <th>Opinion</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>

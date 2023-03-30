@@ -16,9 +16,11 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     @book.useer_id = current_user.id
     if @book.save
-      redirect_to book_path
+      redirect_to book_path(@book)
     else
-      render :new
+      @books = Book.all
+      @user = User.find(current_user.id)
+      render "index"
     end
   end
 
