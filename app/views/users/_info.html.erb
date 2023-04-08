@@ -1,10 +1,8 @@
-<p id="notice">
-  <%= notice%>
-</p>
 <h2>User info</h2>
-<p><%= image_tag user.get_profile_image(100,100) %></p>
+<%= image_tag user.get_profile_image(100,100) %>
   <table class="table">
     <tbody>
+      <tr></tr>
       <tr>
         <th>name</th>
         <th><%= user.name %></th>
@@ -18,9 +16,13 @@
   </table>
 
   <div class="row">
+
+
     <a class="nav-item">
       <%= link_to edit_user_path(user), class: 'btn btn-outline-secondary btn-block' do %>
         <i class="fas fa-user-cog"></i>
       <% end %>
     </a>
+
+
   </div>
